@@ -1,0 +1,42 @@
+# ip=192.168.0.1
+ip: 192.168.0.1
+
+# server.user.id=hong
+# server.user.age=20
+# server.url=http://${ip}
+# server.domain.name=com.doding
+server:
+  user:
+    id: hong
+    age: 20
+  url: http://${ip}
+  domain:
+    name: com.doding
+
+# member.names=hong, jang, lim
+member:
+  names: hong, jang, lim
+# members.skils[0]=java
+# members.skils[1]=javascript
+members:
+  skils:
+    - java
+    - javascript
+
+# #---
+---
+# members.skils[1]=python
+members:
+  skils:
+    '[1]': python
+
+logging:
+  level:
+    '[org.springframework]': info
+    '[com.dodoing]': trace
+  pattern:
+    console: '%clr(%d{HH:mm:ss} [%-5p] %c{30}.%M.%L - %m%n)'
+spring:
+  output:
+    ansi:
+      enabled: always
